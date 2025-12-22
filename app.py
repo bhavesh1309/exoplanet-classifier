@@ -17,7 +17,7 @@ CORS(app)
 # ==================== LOAD MODEL FILES WITH JOBLIB ====================
 # Load the trained Random Forest model
 try:
-    model = joblib.load('exoplanet_classifier_rf.pkl')
+    model = joblib.load("exoplanet_classifier_rf.pkl", mmap_mode="r")
     print("✅ Model loaded successfully with joblib!")
 except FileNotFoundError:
     print("⚠️ Warning: model.pkl not found. Please ensure the model file exists.")
